@@ -102,15 +102,17 @@ Another important thing is to fully comprehend how the CRT 'map' two 'subrgroups
 $x \equiv a_{1}\mod m_{1}$ <br>
 $\dots$ <br>
 $x \equiv a_{n}\mod m_{n}$ <br>
-are fully 'mapped' into this:
+are fully 'mapped' into this: <br>
 $x \equiv \sum_{i = 1}^{n} a_{i}N_{i}n_{i}(\mod \prod_{i = 1}^{n} m_{i})$ <br>
-then these (and every other operation performed $\mod m_{1}\dots m_{n}$):
+then these (and every other operation performed $\mod m_{1}\dots m_{n}$): <br>
 $x \equiv a_{1} + z_{1}\mod m_{1}$ <br>
 $\dots$ <br>
 $x \equiv a_{n} + z_{n}\mod m_{n}$ <br>
 will be fully 'mapped' into: <br>
 $x \equiv \sum_{i = 1}^{n} (a_{i} + z_{i})N_{i}n_{i}(\mod \prod_{i = 1}^{n} m_{i})$ <br>
 <br>
-The last thing to notice about this whole theorem is that the restriction imposed by it doesn't concern primes but co-primes, and since the powers of primes are co-prime pairwise this means that we can use powers of primes as 'sub-groups' to prove statements on 'super-groups' which identify all integer numbers:
-$integer = p_{1}^{k_{1}} \dots p_{n}^{k_{n}}$
+The last thing to notice about this whole theorem is that the restriction imposed by it doesn't concern primes but co-primes, and since the powers of primes are co-prime pairwise this means that we can use powers of primes as 'sub-groups' to prove statements on 'super-groups' which identify all integer numbers: <br>
+$integer = p_{1}^{k_{1}} \dots p_{n}^{k_{n}}$ <br>
+-CRT-> <br>
+$Z_{integer} = Z_{p_{1}^{k_{1}}} \dots Z_{p_{n}^{k_{n}}}$
 </p>
