@@ -109,9 +109,13 @@ $\dots$ <br>
 $x \equiv a_{n} + z_{n}\mod m_{n}$ <br>
 will be fully 'mapped' into: <br>
 $x \equiv \sum_{i = 1}^{n} (a_{i} + z_{i})N_{i}n_{i}(\mod \prod_{i = 1}^{n} m_{i})$. <br>
-Here it's clear that any operation performed (must be repeated consistently for every $a_{i}$) will be reflected in the solution congruence. The summation performed into the solution formula and multiplicatioin by $N_{i}n_{i}$ is quite misleading and magical, to better understand how this is possible, let's look again at the example above: $17^{2} \mod 35$: the biggest problem with operations made modulo $n$ is that are absolutely not intuitive, the modulo breaks our understanding of how things work, so to understand? how this example works in both direction (since one direction is trivial):<br>
-$x \equiv (\sum_{i = 1}^{n} (a_{i})N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})$<br>
-$(a_{i})N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i}) \equiv (a_{i})^{2}(\mod m_{i})$ <br>
+Here it's ¿clear? that any operation performed (must be repeated consistently for every $a_{i}$) will be reflected in the solution congruence. The summation performed into the solution formula and multiplication by $N_{i}n_{i}$ is quite misleading and magical. To better understand how this is possible, let's look again at the example above: $17^{2} \mod 35$. The biggest problem with operations made modulo $n$ is that are absolutely not intuitive, the modulo breaks our understanding of how things work, so to understand? how this example works in both direction (since one direction is trivial):<br>
+$x \equiv (\sum_{i = 1}^{n} a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})$<br>
+$\equiv$<br>
+$x \equiv (\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\mod \prod_{i = 1}^{n} m_{i})$<br>
+$\equiv$<br>
+$(a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i}) \equiv (a_{i})^{2}(\mod m_{i})$ <br>
+Where $(a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})$ can be obtained because
 I know this won't make you understand this, it's not because you are stupid, it's just because modular arithmetic and this theorem are magic my friend.
 <br>
 The last thing to notice about this whole theorem is that the restriction imposed by it doesn't concern primes but co-primes, and since the powers of primes are co-prime pairwise this means that we can use powers of primes as 'sub-groups' to prove statements on 'super-groups' which identify all integer numbers: <br>
