@@ -4,8 +4,9 @@ $x \equiv a_{1}\mod m_{1}$ <br>
 $\dots$ <br>
 $x \equiv a_{n}\mod m_{n}$ <br>
 has a unique solution for x modulo M where $M = m_{1}\dots m_{n}$ and $m_{1}\dots m_{n}$ are pairwise coprime. <br>
-This is useful in reverse direction too, i.e. if a congruence works for a modulo which is a multipication of primes, then it will work for those primes individually. <br>
+This is useful in reverse direction too, i.e. if a congruence works for a modulo which is a multipication of coprimes, then it will work for those coprimes individually. <br>
 This whole work is home-made. I already posted this on my X account, here I'll try to correct every potential error and inconsistence and provide a complete proof.<br>
+Note also that a lot of things come directly from https://crypto.stanford.edu/pbc/notes/numbertheory/crt.html even though are not copy-pasted but I tried to rielaborate in order to make them more complete and easy to digest.
 </p>
 
 ## Building the solution
@@ -49,4 +50,67 @@ $x \equiv a_{1}\mod m_{1}$ <br>
 $\dots$ <br>
 $x \equiv a_{n}\mod m_{n}$ <br>
 simultaneously and uniquely.
+</p>
+
+## Example
+
+<p>We could write for ex.: <br>
+$17 \in Z_{35}$ as $(2, 3) \in Z_{5} * Z_{7}$<br>
+or <br>
+$1 \in Z_{pq}$ as $(1, 1) \in Z_{p} * Z_{q}$. <br>
+To better clarify the first ex. which is not obvious, note that $N_{i}n_{i} \equiv 1\mod m_{i}$ doesn't mean that $N_{i}n_{i} = 1$: <br>
+$x \equiv 2\mod 5$ <br>
+$x \equiv 3\mod 7$ <br>
+$\equiv$<br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1} * m_{2})$ <br>
+-----<br>
+$N_{1} = 7$<br>
+$n_{1} =$ ? <br>
+$7 * n_{1} + (- z_{1}) * 5 = 1$ <br>
+$7 * 3 - 1 = 4 * 5$ --- here I applied Bezout's Identity by hand, in a real scenario EEA or another algorithm would be mandatory.<br>
+$n_{1} = 3$<br>
+$a_{1}N_{1}n_{1} = 2 * 7 * 3 = 42$<br>
+-----<br>
+$N_{2} = 5$ <br>
+$n_{2} =$ ? <br>
+$5 * n_{2} + (- z_{2}) * 7 = 1$ <br>
+$5 * 3 - 1 = 2 * 7$ <br>
+$n_{2} = 3$<br>
+$a_{2}N_{2}n_{2} = 3 * 5 * 3 = 45$<br>
+-----<br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1} * m_{2})$ <br>
+-><br>
+$x \equiv 42 + 45 (\mod 35)$ <br>
+-><br>
+$x \equiv 87 \mod 35$ <br>
+-><br>
+$x \equiv 17 \mod 35$ <br>
+-----<br>
+$x \equiv 2\mod 5$ <br>
+$x \equiv 3\mod 7$ <br>
+$\equiv$<br>
+$x \equiv 17 \mod 35$ <br>
+</p>
+
+## Further implications and usage of this theorem
+<p>This theorem is more powerful than what it looks.<br>
+Suppose we have a couple numbers $x, y \in Z_{pq}$ and that these numbers correspond to $(a, b), (c, d) \in Z_{p} * Z_{q}$. <br>
+From the example above is clear that $Z_{p}$ and $Z_{q}$ are both already composed of 2 elements of two other $Z_{?}$, this means that $Z_{pq}$ has a modulo of 4 coprimes multiplied. <br>
+The interesting (and powerful) thing which is not clear at a first sight is that doing $x + y$ is the same as doing $(a + c, b + d)$ and doing $xy$ is the same as $(ac, bd)$. This means that for ex. if we need to compute a power in $Z_{pq}$, we can use $Z_{p}$ and $Z_{q}$ instead, which is convenient: $17^{2} \mod 35$ is computable applying the CRT to $(2^{2}, 3^{2}) \in Z_{5} * Z_{7}$.<br>
+Going back to $x + y$ and $xy$ reasoning, it's important to fully understand this behaviour. $(a, b), (c, d) \in Z_{p} * Z_{q}$ are numbers which are pairwise coprime (a, b, c, d are coprime), this example is slightly different from the example above, infact $Z_{p}$ and $Z_{q}$ represented like so are equivalent to $Z_{1_{?}} \dots Z_{4_{?}}$ since elements are not 'merged' but are 'paired'. This 'pairing' is a little bit misleading since the CRT doesn't care about order of 'subgroups'. Also, $Z_{pq}$ elements are not merged completely, otherwise its elements would be composed by 1 number and not 2 (x, y). The 'merge' is only considered for $Z_{1_{?}}$, $Z_{3_{?}}$ -> $x$ and $Z_{2_{?}}$, $Z_{4_{?}}$ -> $y$. And this is why $x + y$ is the same as doing $(a + c, b + d)$ and doing $xy$ is the same as $(ac, bd)$. <br>
+Another important thing is to fully comprehend how the CRT 'map' two 'subrgroups' modulo coprimes to a 'super-group' in order to make operations (+, -, *, /) hold. Here to avoid putting a bunch of formal useless stuff just note that since these: <br>
+$x \equiv a_{1}\mod m_{1}$ <br>
+$\dots$ <br>
+$x \equiv a_{n}\mod m_{n}$ <br>
+are fully 'mapped' into this:
+$x \equiv \sum_{i = 1}^{n} a_{i}N_{i}n_{i}(\mod \prod_{i = 1}^{n} m_{i})$ <br>
+then these (and every other operation performed $\mod m_{1}\dots m_{n}$):
+$x \equiv a_{1} + z_{1}\mod m_{1}$ <br>
+$\dots$ <br>
+$x \equiv a_{n} + z_{n}\mod m_{n}$ <br>
+will be fully 'mapped' into: <br>
+$x \equiv \sum_{i = 1}^{n} (a_{i} + z_{i})N_{i}n_{i}(\mod \prod_{i = 1}^{n} m_{i})$ <br>
+<br>
+The last thing to notice about this whole theorem is that the restriction imposed by it doesn't concern primes but co-primes, and since the powers of primes are co-prime pairwise this means that we can use powers of primes as 'sub-groups' to prove statements on 'super-groups' which identify all integer numbers:
+$integer = p_{1}^{k_{1}} \dots p_{n}^{k_{n}}$
 </p>
