@@ -90,6 +90,9 @@ $x \equiv 2\mod 5$ <br>
 $x \equiv 3\mod 7$ <br>
 $\equiv$<br>
 $x \equiv 17 \mod 35$ <br>
+(i.e.)<br>
+$17 \equiv 2\mod 5$ <br>
+$17 \equiv 3\mod 7$ <br>
 </p>
 
 ## Further implications and usage of this theorem
@@ -115,10 +118,165 @@ $\equiv$<br>
 $x \equiv (\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\mod \prod_{i = 1}^{n} m_{i})$<br>
 $\equiv$<br>
 $(a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i}) \equiv (a_{i})^{2}(\mod m_{i})$ <br>
-I know this won't make you understand this, it's not because you are stupid, it's just because modular arithmetic and this theorem are magic my friend.
+The real proof of equivalence under every operation should include other cases or should be more formal, but I'won't do either.
 <br>
 The last thing to notice about this whole theorem is that the restriction imposed by it doesn't concern primes but co-primes, and since the powers of primes are co-prime pairwise this means that we can use powers of primes as 'sub-groups' to prove statements on 'super-groups' which identify all integer numbers: <br>
 $integer = p_{1}^{k_{1}} \dots p_{n}^{k_{n}}$ <br>
 -CRT-> <br>
 $Z_{integer} = Z_{p_{1}^{k_{1}}} \dots Z_{p_{n}^{k_{n}}}$
+</p>
+
+## Extending the reasoning to polynomials
+<p>Example: we need to solve $x^{2} - 1  \mod 77 = 0$, or (rewritten):<br>
+$x^{2} \equiv 1 \mod 77$ <br>
+Note that finding the solutions to this congruence means finding the roots of the 2nd degree polynomial and/or at the same time finding the square roots of $1 \mod 77$, hence it's a good example.
+The first solution one could immediately think of is: $x = 1$ or $x = - 1$.<br>
+It turns out that this is partially correct, i.e. is not the complete solution. From the CRT we know that: <br>
+$x^{2} - 1  \mod 77 = 0$ <br>
+$\equiv$<br>
+$x^{2} - 1  \mod 7 = 0$ <br>
+$x^{2} - 1  \mod 11 = 0$. <br>
+Now, since every 'sub-group' will have $z$ (2 in this case) distinct solutions which depend on the degree of the poly (at most there will be $degree$ roots), and these solutions must be completely 'mapped' into $x^{2} - 1  \mod 77 = 0$, we will need to have ~ $z^{congruences}$ different solutions for this congruence. This is because for every congruence we will find ~ $z$ solutions, and every solution 'combination' will need to be 'mapped' into $x^{2} - 1  \mod 77 = 0$. The reason for 'combinations' (I'm not talking about math combinations) will be more clear solving the example. <br>Let's solve this simple exercise noting that is basically the same as the previous example showed above: <br>
+for $x^{2} - 1  \mod 7 = 0$ we will have $x = 1 \mod 7$ or $x = - 1 \mod 7$ and,<br>
+for $x^{2} - 1  \mod 11 = 0$ we will have $x = 1 \mod 11$ or $x = - 1 \mod 11$.<br>
+Our solution ($x^{2} - 1  \mod 77 = 0$) will need to 'map' every different 'combination' of solutions of our starting congruences because every single 'sub-congruences' solutions case must covered, i.e. following the example we will actually need to cover these solutions: <br>
+$x \equiv 1  \mod 7$ <br>
+$x \equiv 6  \mod 7$ <br>
+$x \equiv 1  \mod 11$ <br>
+$x \equiv 10  \mod 11$. <br>
+And since our final solution will need to cover every case: <br>
+1st solution - $x \equiv 1  \mod 7$ && $x \equiv 1  \mod 11$ <br>
+2nd solution - $x \equiv 1  \mod 7$ && $x \equiv 10  \mod 11$ <br>
+3rd solution - $x \equiv 6  \mod 7$ && $x \equiv 1  \mod 11$ <br>
+4th solution - $x \equiv 6  \mod 7$ && $x \equiv 10  \mod 11$ <br>
+At first this looks strange because we set our mind to always have one single solution for a system of congruences, but remember that when a polynomial has more than one solution it means that our resulting CRT-congruence will have more than one solution too, following the rule of ~ $z^{congruences}$ different solutions. <br>
+Now since we know that in this case we will have 4 different solutions, we will apply the CRT 4 times to every 'combination' of 'sub-congruences' solutions.<br>
+1st solution:<br>
+$x \equiv 1  \mod 7$ <br> 
+$x \equiv 1  \mod 11$ <br>
+$\equiv$<br>
+$x \equiv ?  \mod 77$ <br>
+-----<br>
+$N_{1} = 11$<br>
+$n_{1} =$ ? <br>
+$11 * n_{1} + (- z_{1}) * 7 = 1$ <br>
+$11 * 2 - 1 = 3 * 7$ --- BI.<br>
+$n_{1} = 2$<br>
+$a_{1}N_{1}n_{1} = 1 * 11 * 2 = 22$<br>
+-----<br>
+$N_{2} = 7$ <br>
+$n_{2} =$ ? <br>
+$7 * n_{2} + (- z_{2}) * 11 = 1$ <br>
+$7 * 8 - 1 = 5 * 11$ <br>
+$n_{2} = 8$<br>
+$a_{2}N_{2}n_{2} = 1 * 7 * 8 = 56$<br>
+-----<br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1} * m_{2})$ <br>
+-><br>
+$x \equiv 22 + 56 (\mod 77)$ <br>
+-><br>
+$x \equiv 1 (\mod 77)$ <br>
+This was quite obvious, but it's always better to verify. <br>
+----------<br>
+2nd solution: <br>
+$x \equiv 1  \mod 7$ <br> 
+$x \equiv 10  \mod 11$ <br>
+$\equiv$<br>
+$x \equiv ?  \mod 77$ <br>
+-----<br>
+$N_{1} = 11$<br>
+$n_{1} =$ ? <br>
+$11 * n_{1} + (- z_{1}) * 7 = 1$ <br>
+$11 * 2 - 1 = 3 * 7$ --- BI.<br>
+$n_{1} = 2$<br>
+$a_{1}N_{1}n_{1} = 1 * 11 * 2 = 22$<br>
+-----<br>
+$N_{2} = 7$ <br>
+$n_{2} =$ ? <br>
+$7 * n_{2} + (- z_{2}) * 11 = 1$ <br>
+$7 * 8 - 1 = 5 * 11$ <br>
+$n_{2} = 8$<br>
+$a_{2}N_{2}n_{2} = 10 * 7 * 8 = 56$<br>
+-----<br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1} * m_{2})$ <br>
+-><br>
+$x \equiv 22 + 560 (\mod 77)$ <br>
+-><br>
+$x \equiv 43 (\mod 77)$ <br>
+----------<br>
+3rd solution: <br>
+$x \equiv 6  \mod 7$ <br> 
+$x \equiv 1  \mod 11$ <br>
+$\equiv$<br>
+$x \equiv ?  \mod 77$ <br>
+-----<br>
+$N_{1} = 11$<br>
+$n_{1} =$ ? <br>
+$11 * n_{1} + (- z_{1}) * 7 = 1$ <br>
+$11 * 2 - 1 = 3 * 7$ --- BI.<br>
+$n_{1} = 2$<br>
+$a_{1}N_{1}n_{1} = 6 * 11 * 2 = 132$<br>
+-----<br>
+$N_{2} = 7$ <br>
+$n_{2} =$ ? <br>
+$7 * n_{2} + (- z_{2}) * 11 = 1$ <br>
+$7 * 8 - 1 = 5 * 11$ <br>
+$n_{2} = 8$<br>
+$a_{2}N_{2}n_{2} = 1 * 7 * 8 = 56$<br>
+-----<br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1} * m_{2})$ <br>
+-><br>
+$x \equiv 132 + 56 (\mod 77)$ <br>
+-><br>
+$x \equiv 34 (\mod 77)$ <br>
+----------<br>
+4th solution: <br>
+$x \equiv 6  \mod 7$ <br> 
+$x \equiv 10  \mod 11$ <br>
+$\equiv$<br>
+$x \equiv ?  \mod 77$ <br>
+-----<br>
+$N_{1} = 11$<br>
+$n_{1} =$ ? <br>
+$11 * n_{1} + (- z_{1}) * 7 = 1$ <br>
+$11 * 2 - 1 = 3 * 7$ --- BI.<br>
+$n_{1} = 2$<br>
+$a_{1}N_{1}n_{1} = 6 * 11 * 2 = 132$<br>
+-----<br>
+$N_{2} = 7$ <br>
+$n_{2} =$ ? <br>
+$7 * n_{2} + (- z_{2}) * 11 = 1$ <br>
+$7 * 8 - 1 = 5 * 11$ <br>
+$n_{2} = 8$<br>
+$a_{2}N_{2}n_{2} = 10 * 7 * 8 = 560$<br>
+-----<br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1} * m_{2})$ <br>
+-><br>
+$x \equiv 132 + 560 (\mod 77)$ <br>
+-><br>
+$x \equiv 76 (\mod 77)$ <br>  
+----------<br>
+Then to resume: <br>
+-----<br>
+$x \equiv 1  \mod 7$ <br>
+$x \equiv 1  \mod 11$ <br>
+->
+$x \equiv 1 (\mod 77)$ <br>
+-----<br>
+$x \equiv 1  \mod 7$ <br>
+$x \equiv - 1  \mod 11$ <br>
+->
+$x \equiv 43 (\mod 77)$ <br>
+-----<br>
+$x \equiv - 1  \mod 7$ <br>
+$x \equiv 1  \mod 11$ <br>
+->
+$x \equiv 34 (\mod 77)$ <br>
+-----<br>
+$x \equiv - 1  \mod 7$ <br>
+$x \equiv - 1  \mod 11$ <br>
+->
+$x \equiv - 1 (\mod 77)$ <br>
+-----<br>
+
 </p>
