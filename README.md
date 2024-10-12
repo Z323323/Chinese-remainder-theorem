@@ -278,5 +278,9 @@ $x \equiv - 1  \mod 11$ <br>
 ->
 $x \equiv - 1 (\mod 77)$ <br>
 -----<br>
-
+Infact, recalling $x^{2} \equiv 1 \mod 77$: <br>
+$1^{2} \equiv 1 \mod 77$ <br>
+$43^{2} \equiv 1 \mod 77$ <br>
+$34^{2} \equiv 1 \mod 77$ <br>
+$76^{2} \equiv 1 \mod 77$ <br>
 </p>
