@@ -145,10 +145,11 @@ $x \equiv 6  \mod 7$ <br>
 $x \equiv 1  \mod 11$ <br>
 $x \equiv 10  \mod 11$. <br>
 And since our final solution will need to cover every case: <br>
-1st solution - $x \equiv 1  \mod 7$ && $x \equiv 1  \mod 11$ <br>
-2nd solution - $x \equiv 1  \mod 7$ && $x \equiv 10  \mod 11$ <br>
-3rd solution - $x \equiv 6  \mod 7$ && $x \equiv 1  \mod 11$ <br>
-4th solution - $x \equiv 6  \mod 7$ && $x \equiv 10  \mod 11$ <br>
+1st solution&ensp;--- $x \equiv 1  \mod 7$ && $x \equiv 1  \mod 11$ <br>
+2nd solution --- $x \equiv 1  \mod 7$ && $x \equiv 10  \mod 11$ <br>
+3rd solution&ensp;--- $x \equiv 6  \mod 7$ && $x \equiv 1  \mod 11$ <br>
+4th solution&ensp;--- $x \equiv 6  \mod 7$ && $x \equiv 10  \mod 11$ <br>
+  
 At first this looks strange because we set our mind to always have one single solution for a system of congruences, but remember that when a polynomial has more than one solution it means that our resulting CRT-congruence will have more than one solution too, following the rule of ~ $z^{congruences}$ different solutions. <br>
 Now since we know that in this case we will have 4 different solutions, we will apply the CRT 4 times to every 'combination' of 'sub-congruences' solutions.<br>
 1st solution:<br>
@@ -254,7 +255,7 @@ $x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1} * m_{2})$ <br>
 -><br>
 $x \equiv 132 + 560 (\mod 77)$ <br>
 -><br>
-$x \equiv 76 (\mod 77)$ <br>  
+$x \equiv 76 (\mod 77)$<br>  
 ----------<br>
 Then to resume: <br>
 -----<br>
@@ -283,4 +284,6 @@ $1^{2} \equiv 1 \mod 77$ <br>
 $43^{2} \equiv 1 \mod 77$ <br>
 $34^{2} \equiv 1 \mod 77$ <br>
 $76^{2} \equiv 1 \mod 77$ <br>
+These 4 numbers obtained are called the square roots of unity of $x^{2} \equiv 1 \mod 77$.
+Can we consider these square roots of unity like the square roots of $1 \mod 77$?
 </p>
