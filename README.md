@@ -285,5 +285,4 @@ $43^{2} \equiv 1 \mod 77$ <br>
 $34^{2} \equiv 1 \mod 77$ <br>
 $76^{2} \equiv 1 \mod 77$ <br>
 These 4 numbers obtained are called the square roots of unity of $x^{2} \equiv 1 \mod 77$. <br>
-Can we consider these square roots of unity like the square roots of $1 \mod 77$?
 </p>
