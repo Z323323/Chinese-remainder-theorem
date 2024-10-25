@@ -1,4 +1,4 @@
-# Chinese-remainder-theorem
+# Chinese remainder theorem
 <p>The Chinese remainder theorem is one of the most useful and important foundation theorems regarding cryptography and modular arithmetic.<br>
 $x \equiv a_{1}\mod m_{1}$ <br>
 $\dots$ <br>
