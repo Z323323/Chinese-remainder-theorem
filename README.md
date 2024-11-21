@@ -142,9 +142,9 @@ $17 \equiv 3\mod 7$ <br>
 ## Further implications and usage of this theorem
 <p>This theorem is more powerful than what it looks.<br>
 Suppose we have a couple numbers $x, y \in Z_{pq}$ and that these numbers correspond to $(a, b), (c, d) \in Z_{p} * Z_{q}$. <br>
-The interesting (and powerful) thing which is not clear at a first sight is that doing $x + y$ is the same as doing $(a + c, b + d)$ and doing $xy$ is the same as $(ac, bd)$. This means that for ex. if we need to compute a power in $Z_{pq}$, we can use $Z_{p}$ and $Z_{q}$ instead, which is convenient: $17^{2} \mod 35$ is computable applying the CRT to $(2^{2}, 3^{2}) \in Z_{5} * Z_{7}$.<br>
-Going back to $x + y$ and $xy$ reasoning, it's important to fully understand this behaviour. $(a, b), (c, d) \in Z_{p} * Z_{q}$ are numbers which are pairwise coprime (a, b, c, d are coprime), this example is slightly different from the example above, infact $Z_{p}$ and $Z_{q}$ represented like so are equivalent to $Z_{?_{1}} \dots Z_{?_{4}}$ since elements are not 'merged' but are 'paired'. This 'pairing' is a little bit misleading since the CRT doesn't care about order of 'subgroups'. Also, $Z_{pq}$ elements are not merged completely, otherwise its elements would be composed by 1 number and not 2 (x, y). The 'merge' is only considered for $Z_{?_{1}}$, $Z_{?_{3}}$ -> $x$ and $Z_{?_{2}}$, $Z_{?_{4}}$ -> $y$. And this is why $x + y$ is the same as doing $(a + c, b + d)$ and doing $xy$ is the same as $(ac, bd)$. Now to go back to why Ben Lynn has considered these 'pairings' (which of course have a meaning), the reason is that considering $(Z_{?_{1}}, Z_{?_{2}})$ as $Z_{p}$ and $(Z_{?_{3}}, Z_{?_{4}})$ as $Z_{q}$ we can perform seamingless 'cartesian-graph-like' operations between 'subgroups'. <br>
-Another important thing is to fully comprehend how the CRT 'map' two 'subrgroups' modulo coprimes to a 'super-group' in order to make operations (+, -, *, /) hold. Here to avoid putting a bunch of formal (and therefore work :'D) stuff just note that since these:
+The interesting (and powerful) thing which is not clear at a first sight is that doing $x + y$ is the same as doing $(a + c, b + d)$ and doing $xy$ is the same as $(ac, bd)$. This means that for ex. if we need to compute a power in $Z_{pq}$, we can use $Z_{p}$ and $Z_{q}$ instead, which is convenient: $17^{2} \mod 35$ is computable applying the CRT to $(2^{2}, 3^{2}) \in Z_{5} * Z_{7}$ (clearly convenient).<br>
+Going back to $x + y$ and $xy$ examples, these are slightly different from the example above, indeed $Z_{p}$ and $Z_{q}$ represented like so are equivalent to $Z_{?_{1}} \dots Z_{?_{4}}$ since elements are not 'merged' but are 'paired'. This 'pairing' is a little bit misleading since the CRT doesn't care about order of 'subgroups'. Also, $Z_{pq}$ elements are not merged completely, otherwise its elements would be composed by $1$ number and not $2$ $(x, y)$. The 'merge' is only considered for $Z_{?_{1}}$, $Z_{?_{3}}$ -> $x$ and $Z_{?_{2}}$, $Z_{?_{4}}$ -> $y$. And this is why $x + y$ is the same as doing $(a + c, b + d)$ and doing $xy$ is the same as $(ac, bd)$.
+Another important thing is to fully comprehend how the CRT 'map' two 'subrgroups' modulo coprimes to a 'super-group' in order to make operations $(+, -, *, /)$ hold. Here to avoid putting a bunch of formal (and therefore work :'D) stuff just note that since these:
   
 $x \equiv a_{1}\mod m_{1}$ <br>
 $\dots$ <br>
@@ -170,7 +170,9 @@ $x \equiv (\sum_{i = 1}^{n} a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})$<
 $\equiv$<br>
 $x \equiv (\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\mod \prod_{i = 1}^{n} m_{i})$<br>
 $\equiv$<br>
-$(a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i}) \equiv (a_{i})^{2}(\mod m_{i})$
+$(a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})
+$\equiv$<br>
+$(a_{i})^{2}(\mod m_{i})$
 
 The real proof of equivalence under every operation should include other cases.
 <br>
