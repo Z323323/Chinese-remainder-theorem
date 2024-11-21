@@ -197,7 +197,8 @@ $\equiv$<br>
 $x^{2} - 1  \mod 7 = 0$ <br>
 $x^{2} - 1  \mod 11 = 0$
 
-Now, since every 'sub-group' will have $z$ (2 in this case) distinct solutions which depend on the degree of the poly (at most there will be $degree$ roots), and these solutions must be completely 'mapped' into $x^{2} - 1  \mod 77 = 0$, we will need to have ~ $z^{congruences}$ different solutions for this congruence. This is because for every congruence we will find ~ $z$ solutions, and every solution 'combination' will need to be 'mapped' into $x^{2} - 1  \mod 77 = 0$. The reason for 'combinations' (I'm not talking about math combinations) will be more clear solving the example. <br>Let's solve this simple exercise noting that is basically the same as the previous example showed above: <br>
+Now, since every 'sub-group' will have $z$ (2 in this case) distinct solutions which depend on the degree of the poly (at most there will be $degree$ roots), and these solutions must be completely 'mapped' into $x^{2} - 1  \mod 77 = 0$, we will need to have a number of final solutions which is the product of the solutions of the single congruences.<br>
+Let's solve this simple exercise noting that is basically the same as the previous example showed above: <br>
 
 for $x^{2} - 1  \mod 7 = 0$ we will have $x = 1 \mod 7$ or $x = - 1 \mod 7$<br>
 and,<br>
@@ -217,7 +218,7 @@ And since our final solution will need to cover every case: <br>
 3rd solution&ensp;--- $x \equiv 6  \mod 7$ && $x \equiv 1  \mod 11$ <br>
 4th solution&ensp;--- $x \equiv 6  \mod 7$ && $x \equiv 10  \mod 11$ <br>
   
-At first this looks strange because we set our mind to always have one single solution for a system of congruences, but remember that when a polynomial has more than one solution it means that our resulting CRT-congruence will have more than one solution too, following the rule of ~ $z^{congruences}$ different solutions. <br>
+At first this looks strange because we set our mind to always have one single solution for a system of congruences, but remember that when a polynomial has more than one solution it means that our resulting CRT-congruence will have more than one solution too, following the rule of the product. <br>
 Now since we know that in this case we will have 4 different solutions, we will apply the CRT 4 times to every 'combination' of 'sub-congruences' solutions.<br>
 
 1st solution:<br>
