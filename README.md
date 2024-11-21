@@ -197,7 +197,7 @@ $\equiv$<br>
 $x^{2} - 1  \mod 7 = 0$ <br>
 $x^{2} - 1  \mod 11 = 0$
 
-Now, since every 'sub-group' will have $z$ (2 in this case) distinct solutions which depend on the degree of the poly (at most there will be $degree$ roots), and these solutions must be completely 'mapped' into $x^{2} - 1  \mod 77 = 0$, we will need to have a number of final solutions which is the product of the solutions of the single congruences.<br>
+Now, since every congruence will have $2$ distinct solutions which depend on the degree of the poly (at most there will be $degree$ roots), and these solutions must be completely 'mapped' into $x^{2} - 1  \mod 77 = 0$, we will need to have a number of final solutions which is the product of the solutions of the single congruences.<br>
 Let's solve this simple exercise noting that is basically the same as the previous example showed above: <br>
 
 for $x^{2} - 1  \mod 7 = 0$ we will have $x = 1 \mod 7$ or $x = - 1 \mod 7$<br>
