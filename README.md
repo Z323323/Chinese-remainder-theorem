@@ -166,11 +166,11 @@ $x \equiv \sum_{i = 1}^{n} (a_{i} + z_{i})N_{i}n_{i}(\mod \prod_{i = 1}^{n} m_{i
 
 Here it's ¿clear? that any operation performed (must be repeated consistently for every $a_{i}$) will be reflected in the solution congruence. The summation performed into the solution formula and multiplication by $N_{i}n_{i}$ is quite misleading and magical. To better understand how this is possible, let's look again at the example above: $17^{2} \mod 35$. The biggest problem with operations made modulo $n$ is that are absolutely not intuitive, the modulo breaks our understanding of how things work, so to understand how this example works in both directions:
 
-$x \equiv (\sum_{i = 1}^{n} a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})$<br>
+$(\sum_{i = 1}^{n} a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})$<br>
 $\equiv$<br>
-$x \equiv (\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\mod \prod_{i = 1}^{n} m_{i})$<br>
+$(\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\sum_{i = 1}^{n} a_{i}N_{i}n_{i})(\mod \prod_{i = 1}^{n} m_{i})$<br>
 $\equiv$<br>
-$(a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})
+$(a_{i}N_{i}n_{i})^{2}(\mod \prod_{i = 1}^{n} m_{i})$<br>
 $\equiv$<br>
 $(a_{i})^{2}(\mod m_{i})$
 
