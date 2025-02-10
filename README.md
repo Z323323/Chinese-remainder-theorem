@@ -321,27 +321,27 @@ $x \equiv 76 \mod 77$
 
 $-----$
 
-To resume: <br>
+Resume<br>
 $-----$<br>
 $x \equiv 1  \mod 7$<br>
 $x \equiv 1  \mod 11$<br>
 $->$<br>
-$x \equiv 1 (\mod 77)$<br>
+$x \equiv 1 \mod 77$<br>
 $-----$<br>
 $x \equiv 1  \mod 7$<br>
 $x \equiv - 1  \mod 11$<br>
 $->$<br>
-$x \equiv 43 (\mod 77)$<br>
+$x \equiv 43 \mod 77$<br>
 $-----$<br>
 $x \equiv - 1  \mod 7$<br>
 $x \equiv 1  \mod 11$<br>
 $->$<br>
-$x \equiv 34 (\mod 77)$<br>
+$x \equiv 34 \mod 77$<br>
 $-----$<br>
 $x \equiv - 1  \mod 7$<br>
 $x \equiv - 1  \mod 11$<br>
 $->$<br>
-$x \equiv - 1 (\mod 77)$<br>
+$x \equiv - 1 \mod 77$<br>
 $-----$<br>
 
 Indeed, recalling $x^{2} \equiv 1 \mod 77$ we have
