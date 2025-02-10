@@ -175,7 +175,7 @@ Suppose we have a couple numbers $x, y \in Z_{pq}$ and that these numbers corres
 Finding the solutions to this congruence means finding the square roots of $1 \mod 77$, hence it's a good example. The first solution one could immediately think of is: $x = 1$ or $x = - 1$. It turns out that this is partially correct, that is, it is not the complete solution. From the **CRT** we know that
 
 $x^{2} \equiv 1 \mod 77$<br>
-$iff$<br>
+$\equiv$<br>
 $x^{2} \equiv 1 \mod 7$<br>
 $x^{2} \equiv 1 \mod 11$
 
@@ -185,17 +185,20 @@ _ 1st solution _ <br>
 $x_{1} \equiv 1 \mod 7$<br>
 $x_{2} \equiv 1 \mod 11$<br>
 $\equiv$<br>
-$x \equiv ? \mod 77$<br>
+$x \equiv ? \mod 77$
+
 _ 2nd solution _ <br>
 $x_{1} \equiv - 1 \mod 7$<br>
 $x_{2} \equiv 1 \mod 11$<br>
 $\equiv$<br>
-$x \equiv ? \mod 77$<br>
+$x \equiv ? \mod 77$
+
 _ 3rd solution _ <br>
 $x_{1} \equiv 1 \mod 7$<br>
 $x_{2} \equiv - 1 \mod 11$<br>
 $\equiv$<br>
-$x \equiv ? \mod 77$<br>
+$x \equiv ? \mod 77$
+
 _ 4th solution _ <br>
 $x_{1} \equiv - 1 \mod 7$<br>
 $x_{2} \equiv - 1 \mod 11$<br>
@@ -217,134 +220,135 @@ $11 \cdot 2 - 1 = 3 \cdot 7$ --- BI. <br>
 $n_{1} = 2$<br>
 $a_{1}N_{1}n_{1} = 1 \cdot 11 \cdot 2 = 22$<br>
 $-----$<br>
-$N_{2} = 7$ <br>
-$n_{2} =$ ? <br>
-$7 \cdot n_{2} + (- z_{2}) \cdot 11 = 1$ <br>
-$7 \cdot 8 - 1 = 5 \cdot 11$ <br>
+$N_{2} = 7$<br>
+$n_{2} = ?$<br>
+$7 \cdot n_{2} + (- z_{2}) \cdot 11 = 1$<br>
+$7 \cdot 8 - 1 = 5 \cdot 11$<br>
 $n_{2} = 8$<br>
 $a_{2}N_{2}n_{2} = 1 \cdot 7 \cdot 8 = 56$<br>
 $-----$<br>
-$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1}m_{2})$ <br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} \mod m_{1}m_{2}$<br>
 $->$<br>
-$x \equiv 22 + 56 (\mod 77)$ <br>
+$x \equiv 22 + 56 \mod 77$<br>
 $->$<br>
-$x \equiv 1 (\mod 77)$
+$x \equiv 1 \mod 77$
 
 This was quite obvious, but it's always better to verify.
 
 $-----$
 
 _ 2nd solution _ <br>
-$x \equiv 1  \mod 7$ <br> 
-$x \equiv 10  \mod 11$ <br>
+$x \equiv 1 \mod 7$<br> 
+$x \equiv 10 \mod 11$<br>
 $\equiv$<br>
-$x \equiv ?  \mod 77$ <br>
+$x \equiv ? \mod 77$<br>
 $-----$<br>
 $N_{1} = 11$<br>
-$n_{1} =$ ? <br>
-$11 \cdot n_{1} + (- z_{1}) \cdot 7 = 1$ <br>
+$n_{1} = ?$<br>
+$11 \cdot n_{1} + (- z_{1}) \cdot 7 = 1$<br>
 $11 \cdot 2 - 1 = 3 \cdot 7$ --- BI.<br>
 $n_{1} = 2$<br>
 $a_{1}N_{1}n_{1} = 1 \cdot 11 \cdot 2 = 22$<br>
 $-----$<br>
-$N_{2} = 7$ <br>
-$n_{2} =$ ? <br>
-$7 \cdot n_{2} + (- z_{2}) \cdot 11 = 1$ <br>
-$7 \cdot 8 - 1 = 5 \cdot 11$ <br>
+$N_{2} = 7$<br>
+$n_{2} = ?$<br>
+$7 \cdot n_{2} + (- z_{2}) \cdot 11 = 1$<br>
+$7 \cdot 8 - 1 = 5 \cdot 11$<br>
 $n_{2} = 8$<br>
 $a_{2}N_{2}n_{2} = 10 \cdot 7 \cdot 8 = 56$<br>
 $-----$<br>
-$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1}m_{2})$ <br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} \mod m_{1}m_{2}$<br>
 $->$<br>
-$x \equiv 22 + 560 (\mod 77)$ <br>
+$x \equiv 22 + 560 \mod 77$<br>
 $->$<br>
-$x \equiv 43 (\mod 77)$
+$x \equiv 43 \mod 77$
 
 $-----$
 
 _ 3rd solution _ <br>
-$x \equiv 6  \mod 7$ <br> 
-$x \equiv 1  \mod 11$ <br>
+$x \equiv 6 \mod 7$<br> 
+$x \equiv 1 \mod 11$<br>
 $\equiv$<br>
-$x \equiv ?  \mod 77$ <br>
+$x \equiv ? \mod 77$<br>
 $-----$<br>
 $N_{1} = 11$<br>
-$n_{1} =$ ? <br>
-$11 \cdot n_{1} + (- z_{1}) \cdot 7 = 1$ <br>
+$n_{1} = ?$<br>
+$11 \cdot n_{1} + (- z_{1}) \cdot 7 = 1$<br>
 $11 \cdot 2 - 1 = 3 \cdot 7$ --- BI.<br>
 $n_{1} = 2$<br>
 $a_{1}N_{1}n_{1} = 6 \cdot 11 \cdot 2 = 132$<br>
 $-----$<br>
-$N_{2} = 7$ <br>
-$n_{2} =$ ? <br>
-$7 \cdot n_{2} + (- z_{2}) \cdot 11 = 1$ <br>
-$7 \cdot 8 - 1 = 5 \cdot 11$ <br>
+$N_{2} = 7$<br>
+$n_{2} = ?$<br>
+$7 \cdot n_{2} + (- z_{2}) \cdot 11 = 1$<br>
+$7 \cdot 8 - 1 = 5 \cdot 11$<br>
 $n_{2} = 8$<br>
 $a_{2}N_{2}n_{2} = 1 \cdot 7 \cdot 8 = 56$<br>
 $-----$<br>
-$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1}m_{2})$ <br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} \mod m_{1}m_{2}$<br>
 $->$<br>
-$x \equiv 132 + 56 (\mod 77)$ <br>
+$x \equiv 132 + 56 \mod 77$<br>
 $->$<br>
-$x \equiv 34 (\mod 77)$ <br>
-----------<br>
+$x \equiv 34 \mod 77$ <br>
+
+$-----$
 
 _ 4th solution _ <br>
-$x \equiv 6  \mod 7$ <br> 
-$x \equiv 10  \mod 11$ <br>
+$x \equiv 6 \mod 7$<br> 
+$x \equiv 10 \mod 11$<br>
 $\equiv$<br>
-$x \equiv ?  \mod 77$ <br>
+$x \equiv ? \mod 77$<br>
 $-----$<br>
 $N_{1} = 11$<br>
-$n_{1} =$ ? <br>
-$11 \cdot n_{1} + (- z_{1}) \cdot 7 = 1$ <br>
+$n_{1} = ?$<br>
+$11 \cdot n_{1} + (- z_{1}) \cdot 7 = 1$<br>
 $11 \cdot 2 - 1 = 3 \cdot 7$ --- BI.<br>
 $n_{1} = 2$<br>
 $a_{1}N_{1}n_{1} = 6 \cdot 11 \cdot 2 = 132$<br>
 $-----$<br>
-$N_{2} = 7$ <br>
-$n_{2} =$ ? <br>
-$7 \cdot n_{2} + (- z_{2}) \cdot 11 = 1$ <br>
-$7 \cdot 8 - 1 = 5 \cdot 11$ <br>
+$N_{2} = 7$<br>
+$n_{2} = ?$<br>
+$7 \cdot n_{2} + (- z_{2}) \cdot 11 = 1$<br>
+$7 \cdot 8 - 1 = 5 \cdot 11$<br>
 $n_{2} = 8$<br>
 $a_{2}N_{2}n_{2} = 10 \cdot 7 \cdot 8 = 560$<br>
 $-----$<br>
-$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} (\mod m_{1}m_{2})$ <br>
+$x \equiv a_{1}N_{1}n_{1} + a_{2}N_{2}n_{2} \mod m_{1}m_{2}$<br>
 $->$<br>
-$x \equiv 132 + 560 (\mod 77)$ <br>
+$x \equiv 132 + 560 \mod 77$<br>
 $->$<br>
-$x \equiv 76 (\mod 77)$
+$x \equiv 76 \mod 77$
 
-$-----$<br>
+$-----$
 
 To resume: <br>
 $-----$<br>
-$x \equiv 1  \mod 7$ <br>
-$x \equiv 1  \mod 11$ <br>
+$x \equiv 1  \mod 7$<br>
+$x \equiv 1  \mod 11$<br>
 $->$<br>
-$x \equiv 1 (\mod 77)$ <br>
+$x \equiv 1 (\mod 77)$<br>
 $-----$<br>
-$x \equiv 1  \mod 7$ <br>
-$x \equiv - 1  \mod 11$ <br>
+$x \equiv 1  \mod 7$<br>
+$x \equiv - 1  \mod 11$<br>
 $->$<br>
-$x \equiv 43 (\mod 77)$ <br>
+$x \equiv 43 (\mod 77)$<br>
 $-----$<br>
-$x \equiv - 1  \mod 7$ <br>
-$x \equiv 1  \mod 11$ <br>
+$x \equiv - 1  \mod 7$<br>
+$x \equiv 1  \mod 11$<br>
 $->$<br>
-$x \equiv 34 (\mod 77)$ <br>
+$x \equiv 34 (\mod 77)$<br>
 $-----$<br>
-$x \equiv - 1  \mod 7$ <br>
-$x \equiv - 1  \mod 11$ <br>
+$x \equiv - 1  \mod 7$<br>
+$x \equiv - 1  \mod 11$<br>
 $->$<br>
-$x \equiv - 1 (\mod 77)$ <br>
+$x \equiv - 1 (\mod 77)$<br>
 $-----$<br>
 
-Indeed, recalling $x^{2} \equiv 1 \mod 77$:
+Indeed, recalling $x^{2} \equiv 1 \mod 77$ we have
 
-$1^{2} \equiv 1 \mod 77$ <br>
-$43^{2} \equiv 1 \mod 77$ <br>
-$34^{2} \equiv 1 \mod 77$ <br>
+$1^{2} \equiv 1 \mod 77$<br>
+$43^{2} \equiv 1 \mod 77$<br>
+$34^{2} \equiv 1 \mod 77$<br>
 $76^{2} \equiv 1 \mod 77$
 
 These 4 numbers obtained are called the square roots of unity of $x^{2} \equiv 1 \mod 77$.
