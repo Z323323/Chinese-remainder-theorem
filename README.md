@@ -18,6 +18,8 @@ This is useful in reverse direction too, that is, if a congruence works for a mo
 <p>
   
   We take $N_{i}$ as the multiplication of every $m_{j}$ where $j$ means 'every $m_{i}$ with $i$ from $1$ to $n$ except $m_{i}$'. I know this sounds completely no-sense. 
+
+  $-----$
   
   #### Example
   
@@ -26,6 +28,8 @@ This is useful in reverse direction too, that is, if a congruence works for a mo
   or 
   
   $N_{2} = m_{1}m_{3}\dots$
+
+  $-----$
   
 We know $gcd(N_{i}, m_{i}) = 1$ because every $m_{i}$ is pairwise coprime. We use the Extended Euclidean Algorithm or another algorithm/formula to compute the mutiplicative inverse of every $N_{i}$ and we call it $n_{i}$. Recalling Bezout's Identity
   
@@ -104,13 +108,13 @@ simultaneously and uniquely.
 
 <p>
   
-  We could write for ex.
+  We could write for example
 
 $17 \in Z_{35}$ as $(2, 3) \in (Z_{5}, Z_{7})$<br>
 $or$<br>
 $1 \in Z_{pq}$ as $(1, 1) \in (Z_{p}, Z_{q})$
 
-To better clarify the first ex. which is not obvious let's delve it. (Also note that $N_{i}n_{i} \equiv 1 \mod m_{i}$ doesn't mean that $N_{i}n_{i} = 1$)
+To better clarify the first example which is not obvious let's delve it. (Also note that $N_{i}n_{i} \equiv 1 \mod m_{i}$ doesn't mean that $N_{i}n_{i} = 1$)
 
 $x \equiv 2 \mod 5$<br>
 $x \equiv 3 \mod 7$<br>
@@ -175,7 +179,7 @@ $iff$<br>
 $x^{2} \equiv 1 \mod 7$<br>
 $x^{2} \equiv 1 \mod 11$
 
-Now, since the latter two congruences will have both $2$ distinct solutions $(1, - 1)$ we will have $4$ solutions mapped $\mod 77$ because the **CRT** maps every single possibility.
+Now, since the latter two congruences will have both $2$ distinct solutions $(1, - 1)$ we will have $4$ solutions mapped $\mod 77$ because the **CRT** maps every single combination of them, thus $x^{2} \equiv 1 \mod 77$ will have $4$ solutions because of $77$ being the multiplication of two primes.
 
 _ 1st solution _ <br>
 $x_{1} \equiv 1 \mod 7$<br>
